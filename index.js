@@ -43,8 +43,8 @@ app.post('/submit', upload.single('screenshot'), async (req, res) => {
 
         // Email options
         const mailOptions = {
-            from: process.env.EMAIL,
-            to: email,
+            from: email,
+            to: process.env.EMAIL,
             subject: `Form Submission with Screenshot`,
             text: `Form submission details are:\nName: ${name}\nEmail: ${email}\nRoll No: ${rollNo}\n\nAttached is your screenshot.`,
             attachments: [
