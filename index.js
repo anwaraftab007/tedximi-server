@@ -6,9 +6,11 @@ const nodemailer = require('nodemailer');
 const fs = require('fs');
 const path = require('path');
 
+const cors = require('cors');
 const app = express();
 //const PORT = 3000;
 
+app.use(cors()); // Enable CORS for all routes
 // Middleware
 app.use(bodyParser.json());
 
